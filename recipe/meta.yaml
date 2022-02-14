@@ -1,5 +1,5 @@
 {% set name = "imio" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/imio-{{ version }}.tar.gz
-  sha256: 92e31c9f3bcdc1ac696d6b3c10d3ead2d5f18cffa7675fa7dc2b6f1988fcbe55
+  sha256: 6ef716a5d1df3d4f656378a2b622e95d93d504f72f31423fb7264e0598cfa31e
 
 build:
   noarch: python
