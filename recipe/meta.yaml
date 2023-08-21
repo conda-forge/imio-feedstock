@@ -19,7 +19,7 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - imlib
+    - brainglobe-utils
     - natsort
     - nibabel
     - numpy
@@ -27,7 +27,7 @@ requirements:
     - pynrrd
     - python >=3.7
     - scikit-image
-    - slurmio >=0.0.5
+    - scipy
     - tifffile
     - tqdm
 
