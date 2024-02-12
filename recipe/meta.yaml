@@ -1,5 +1,5 @@
 {% set name = "imio" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/imio-{{ version }}.tar.gz
-  sha256: db70ce1983696c718dcba9f8b4c41e5a9ea04f7b65bb53ef6c34e5bf3a00b9fe
+  sha256: d200f918b86dac17ec00b563a8eb7abc936f6d3d10dce0cef1b0296d5e74bf65
 
 build:
   noarch: python
@@ -30,6 +30,7 @@ requirements:
     - scipy
     - tifffile
     - tqdm
+    - pyarrow
 
 test:
   imports:
