@@ -30,6 +30,7 @@ requirements:
     - scipy
     - tifffile
     - tqdm
+    - pyarrow
 
 test:
   imports:
