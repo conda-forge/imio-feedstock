@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/imio-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/imio-{{ version }}.tar.gz
   sha256: d200f918b86dac17ec00b563a8eb7abc936f6d3d10dce0cef1b0296d5e74bf65
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - brainglobe-utils
     - natsort
@@ -25,7 +25,7 @@ requirements:
     - numpy
     - psutil
     - pynrrd
-    - python >=3.7
+    - python >={{ python_min }}
     - scikit-image
     - scipy
     - tifffile
@@ -40,6 +40,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/brainglobe/imio
